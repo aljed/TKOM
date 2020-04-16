@@ -11,6 +11,11 @@ namespace TKOM
             string code = null;
             if(args.Length == 1)
             {
+                if(File.Exists(args[0])==false)
+                {
+                    Console.WriteLine("File does not exist");
+                    return;
+                }
                 code = new StreamReader(args[0]).ReadToEnd();
                 Lex(code);
             }
