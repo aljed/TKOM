@@ -15,7 +15,7 @@ namespace TKOM
                 {
                     Console.WriteLine("File does not exist");
                     return;
-                }
+                } 
                 code = new StreamReader(args[0]).ReadToEnd();
                 Lex(code);
             }
